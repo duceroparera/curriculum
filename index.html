@@ -15,14 +15,14 @@
     introduces identity, sections follow in reading order under a slim sticky nav.
   */
   :root{
-    --bg:#f4f6f5;
+    --bg:#f3f6f5;
     --surface:#ffffff;
-    --fg:#141a20;
-    --muted:#5c6b76;
-    --border:#dde3e6;
-    --accent:#1f5fae;
+    --fg:#0f1e1b;
+    --muted:#52706a;
+    --border:#d8e4e1;
+    --accent:#0d6e63;
     --accent-ink:#ffffff;
-    --accent-soft:#e7f0fb;
+    --accent-soft:#e1f1ed;
     --font-display:'Space Grotesk', 'Segoe UI', sans-serif;
     --font-body:'Inter', 'Segoe UI', sans-serif;
     --font-mono:'IBM Plex Mono', 'Consolas', monospace;
@@ -30,26 +30,26 @@
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#0c0f13;
-      --surface:#12161d;
-      --fg:#e7ecf1;
-      --muted:#8d9aa6;
-      --border:#232a34;
-      --accent:#6ba0ff;
-      --accent-ink:#0c0f13;
-      --accent-soft:#17233a;
+      --bg:#0a1413;
+      --surface:#0f1a18;
+      --fg:#e6f2ef;
+      --muted:#8babA4;
+      --border:#1f302c;
+      --accent:#52c2b2;
+      --accent-ink:#061513;
+      --accent-soft:#143430;
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#0c0f13;
-    --surface:#12161d;
-    --fg:#e7ecf1;
-    --muted:#8d9aa6;
-    --border:#232a34;
-    --accent:#6ba0ff;
-    --accent-ink:#0c0f13;
-    --accent-soft:#17233a;
+    --bg:#0a1413;
+    --surface:#0f1a18;
+    --fg:#e6f2ef;
+    --muted:#8babA4;
+    --border:#1f302c;
+    --accent:#52c2b2;
+    --accent-ink:#061513;
+    --accent-soft:#143430;
     color-scheme: dark;
   }
 
@@ -72,14 +72,14 @@
   /* ---------- top nav ---------- */
   .nav{
     position:sticky; top:0; z-index:10;
-    background:rgba(244,246,245,.88);
+    background:rgba(243,246,245,.88);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--border);
   }
   @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]) .nav{ background:rgba(12,15,19,.88) }
+    :root:not([data-theme="light"]) .nav{ background:rgba(10,20,19,.88) }
   }
-  :root[data-theme="dark"] .nav{ background:rgba(12,15,19,.88) }
+  :root[data-theme="dark"] .nav{ background:rgba(10,20,19,.88) }
   .nav-inner{
     max-width:760px; margin:0 auto;
     display:flex; align-items:center; justify-content:space-between; gap:12px;
