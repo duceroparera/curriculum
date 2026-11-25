@@ -1,181 +1,477 @@
-<!DOCTYPE HTML>
-<!--
-	Adaptado del template "Solid State" by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Dídac Ucero — Técnico en Sistemas Microinformáticos y Redes</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			ul.contact-inline {
-				display: flex;
-				flex-wrap: wrap;
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				gap: 2.5em;
-			}
-			ul.contact-inline li {
-				margin: 0;
-				padding: 0;
-				display: flex;
-				align-items: center;
-				gap: 0.6em;
-			}
-			ul.contact-inline li:before {
-				content: none;
-			}
-			ul.contact-inline li .emoji {
-				font-size: 1.3em;
-				line-height: 1;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dídac Ucero Parera — Currículum</title>
+<meta name="description" content="Currículum de Dídac Ucero Parera, Técnico en Sistemas Microinformáticos y Redes cursando ASIR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /*
+    Layout: single-column editorial resume on a 760px reading rail; a hero with a
+    quiet network-node motif (nodes/links, standing in for a topology diagram)
+    introduces identity, sections follow in reading order under a slim sticky nav.
+  */
+  :root{
+    --bg:#f4f6f5;
+    --surface:#ffffff;
+    --fg:#141a20;
+    --muted:#5c6b76;
+    --border:#dde3e6;
+    --accent:#1f5fae;
+    --accent-ink:#ffffff;
+    --accent-soft:#e7f0fb;
+    --font-display:'Space Grotesk', 'Segoe UI', sans-serif;
+    --font-body:'Inter', 'Segoe UI', sans-serif;
+    --font-mono:'IBM Plex Mono', 'Consolas', monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0c0f13;
+      --surface:#12161d;
+      --fg:#e7ecf1;
+      --muted:#8d9aa6;
+      --border:#232a34;
+      --accent:#6ba0ff;
+      --accent-ink:#0c0f13;
+      --accent-soft:#17233a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0c0f13;
+    --surface:#12161d;
+    --fg:#e7ecf1;
+    --muted:#8d9aa6;
+    --border:#232a34;
+    --accent:#6ba0ff;
+    --accent-ink:#0c0f13;
+    --accent-soft:#17233a;
+    color-scheme: dark;
+  }
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+  *{box-sizing:border-box}
+  html,body{margin:0; padding:0}
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:var(--font-body);
+    line-height:1.55;
+    padding-left:max(16px, env(safe-area-inset-left, 0px));
+    padding-right:max(16px, env(safe-area-inset-right, 0px));
+  }
+  h1,h2,h3{font-family:var(--font-display); margin:0; text-wrap:balance}
+  p{margin:0}
+  a{color:inherit}
+  img{max-width:100%}
+  .rail{max-width:760px; margin:0 auto}
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="#banner">Dídac Ucero</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+  /* ---------- top nav ---------- */
+  .nav{
+    position:sticky; top:0; z-index:10;
+    background:rgba(244,246,245,.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .nav{ background:rgba(12,15,19,.88) }
+  }
+  :root[data-theme="dark"] .nav{ background:rgba(12,15,19,.88) }
+  .nav-inner{
+    max-width:760px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    padding-block:12px;
+  }
+  .nav-name{font-family:var(--font-mono); font-size:.78rem; font-weight:600; letter-spacing:.02em; white-space:nowrap; text-decoration:none}
+  .nav-links{display:flex; gap:4px; flex-wrap:wrap}
+  .nav-links a{
+    font-size:.78rem; font-weight:600; color:var(--muted); text-decoration:none;
+    padding:6px 10px; border-radius:999px; transition:background .15s, color .15s;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible{background:var(--accent-soft); color:var(--accent)}
+  .nav-cta{display:flex; align-items:center; gap:8px; margin-left:auto}
+  .btn{
+    font-family:var(--font-body); font-weight:600; font-size:.82rem;
+    border-radius:8px; padding:8px 14px; border:1px solid var(--border);
+    background:var(--surface); color:var(--fg); text-decoration:none;
+    cursor:pointer; display:inline-flex; align-items:center; gap:6px;
+    transition:border-color .15s, transform .1s;
+  }
+  .btn:hover{border-color:var(--accent)}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--accent); color:var(--accent-ink); border-color:var(--accent)}
+  .btn-primary:hover{opacity:.92; border-color:var(--accent)}
+  .btn:focus-visible, a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="#banner">Inicio</a></li>
-								<li><a href="#one">Experiencia</a></li>
-								<li><a href="#two">Formación</a></li>
-								<li><a href="#four">Herramientas</a></li>
-								<li><a href="#five">Currículum (PDF)</a></li>
-								<li><a href="#footer">Contacto</a></li>
-								<li><a href="../portfolio/">Ver mi Portfolio</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+  /* ---------- hero ---------- */
+  .hero{position:relative; overflow:clip; padding-block:56px 48px}
+  .hero-bg{position:absolute; inset:0; z-index:0; opacity:.5; pointer-events:none}
+  .hero-bg svg{width:100%; height:100%}
+  .hero-bg line{stroke:var(--accent); stroke-width:1; opacity:.35}
+  .hero-bg circle{fill:var(--accent); opacity:.55}
+  .hero-inner{position:relative; z-index:1; display:flex; gap:28px; align-items:center; flex-wrap:wrap}
+  .avatar{
+    width:112px; height:112px; border-radius:50%; object-fit:cover; flex:none;
+    border:3px solid var(--surface); box-shadow:0 0 0 1px var(--border), 0 10px 30px -12px rgba(20,26,32,.35);
+  }
+  .hero-text{min-width:0; flex:1 1 220px}
+  .eyebrow{
+    font-family:var(--font-mono); font-size:.72rem; font-weight:600; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--accent); display:block; margin-bottom:8px;
+  }
+  .hero-text h1{font-size:clamp(1.7rem, 4vw, 2.3rem); font-weight:700; letter-spacing:-.01em}
+  .hero-role{color:var(--muted); font-size:1rem; margin-top:6px; font-weight:500}
+  .contact-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+  .contact-chip{
+    display:inline-flex; align-items:center; gap:7px;
+    font-family:var(--font-mono); font-size:.76rem;
+    background:var(--surface); border:1px solid var(--border); border-radius:8px;
+    padding:7px 10px; color:var(--fg); cursor:pointer;
+  }
+  .contact-chip svg{width:14px; height:14px; flex:none; color:var(--accent)}
+  .contact-chip:hover{border-color:var(--accent)}
+  .copy-flag{font-size:.7rem; color:var(--accent); font-family:var(--font-mono); opacity:0; transition:opacity .15s; margin-top:8px; display:block}
+  .copy-flag.show{opacity:1}
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon solid fa-network-wired"></span></div>
-							<h2>Soy Dídac Ucero</h2>
-							<p>Técnico en Sistemas Microinformáticos y Redes · <a href="mailto:duceroparera@gmail.com">duceroparera@gmail.com</a></p>
-						</div>
-					</section>
+  /* ---------- sections ---------- */
+  section{padding-block:40px; border-top:1px solid var(--border)}
+  .section-head{margin-bottom:20px}
+  .section-head .eyebrow{margin-bottom:4px}
+  .section-head h2{font-size:1.3rem; font-weight:600}
+  .lede{color:var(--muted); font-size:.95rem; max-width:62ch}
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+  .card{background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:18px 20px}
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#footer" class="image"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Experiencia laboral</h2>
-										<p>He hecho 4 meses de prácticas en el departamento de IT de Preventiva Seguros, dando soporte técnico y viendo de cerca cómo funciona el día a día de una infraestructura real. Antes de eso también trabajé 3 meses como socorrista, una experiencia que, aunque no tiene que ver con la informática, me enseñó a mantener la calma bajo presión y a tomar decisiones rápidas cuando hace falta.</p>
-									</div>
-								</div>
-							</section>
+  .tl{display:flex; flex-direction:column}
+  .tl-item{display:grid; grid-template-columns:auto 1fr; gap:16px; padding-block:16px; border-top:1px solid var(--border)}
+  .tl-item:first-child{border-top:none; padding-top:0}
+  .tl-mark{width:10px; height:10px; border-radius:50%; background:var(--accent); margin-top:7px}
+  .tl-when{font-family:var(--font-mono); font-size:.72rem; color:var(--muted); white-space:nowrap; margin-top:2px}
+  .tl-body h3{font-size:1rem; font-weight:600}
+  .tl-body .org{color:var(--accent); font-weight:600; font-size:.88rem}
+  .tl-body p{color:var(--muted); font-size:.9rem; margin-top:4px}
+  .tl-row{display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap}
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#four" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Formación académica</h2>
-										<p>Estudié Formación Profesional en Sistemas Microinformáticos y Redes en ISEP CEU San Pablo, y antes cursé la ESO en el IES José García Nieto. Fuera del mundo de la informática, también soy socorrista de piscinas y parques acuáticos, un título que compagino con mi formación técnica.</p>
-										<a href="#four" class="special">Ver herramientas</a>
-									</div>
-								</div>
-							</section>
+  .project{display:grid; gap:14px}
+  .project h3{font-size:1.05rem; font-weight:600}
+  .project .tagline{color:var(--accent); font-family:var(--font-mono); font-size:.76rem; font-weight:600; letter-spacing:.02em}
+  .project p{color:var(--muted); font-size:.92rem; margin-top:8px}
+  .chip-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:4px}
+  .chip{font-family:var(--font-mono); font-size:.72rem; font-weight:500; background:var(--accent-soft); color:var(--accent); border-radius:6px; padding:4px 9px}
 
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#footer" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Cómo trabajo</h2>
-										<p>Hablo castellano y catalán de forma nativa, y tengo un nivel B1 de inglés. Me defino como una persona empática, humilde, trabajadora y comprometida; me gusta trabajar en equipo y aportar donde haga falta, y tengo disponibilidad total para incorporarme.</p>
-									</div>
-								</div>
-							</section>
+  .tool-groups{display:flex; flex-direction:column; gap:18px}
+  .tool-group h3{font-family:var(--font-mono); font-size:.74rem; font-weight:600; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin-bottom:10px}
+  .tool-chips{display:flex; flex-wrap:wrap; gap:8px}
+  .tool-chip{font-size:.85rem; background:var(--surface); border:1px solid var(--border); border-radius:8px; padding:7px 12px}
 
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Herramientas que manejo</h2>
-									<p>Estas son algunas de las herramientas y programas con los que me manejo en el día a día, tanto en el terreno técnico como en el más creativo:</p>
-									<section class="features">
-										<article>
-											<h3 class="major">Ofimática</h3>
-											<p>Excel y Word para gestionar documentación e informes del día a día.</p>
-										</article>
-										<article>
-											<h3 class="major">Redes y virtualización</h3>
-											<p>Cisco Packet Tracer para simular redes y VirtualBox para levantar máquinas virtuales.</p>
-										</article>
-										<article>
-											<h3 class="major">Programación</h3>
-											<p>PSeint para diseñar y probar algoritmos paso a paso.</p>
-										</article>
-										<article>
-											<h3 class="major">Diseño</h3>
-											<p>Illustrator, Photoshop y Canva para crear contenido visual.</p>
-										</article>
-									</section>
-								</div>
-							</section>
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+  .lang-item{margin-bottom:12px}
+  .lang-item:last-child{margin-bottom:0}
+  .lang-row{display:flex; justify-content:space-between; font-size:.88rem; margin-bottom:6px}
+  .lang-level{color:var(--muted); font-family:var(--font-mono); font-size:.76rem}
+  .bar{height:6px; border-radius:999px; background:var(--accent-soft); overflow:hidden}
+  .bar-fill{height:100%; background:var(--accent); border-radius:999px}
+  .tag-list{display:flex; flex-wrap:wrap; gap:8px}
+  .tag{font-size:.82rem; border:1px solid var(--border); border-radius:999px; padding:6px 12px; background:var(--surface)}
 
-						<!-- Five -->
-							<section id="five" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="CURRICULUM-DidacUceroParera.pdf" target="_blank" class="image"><img src="images/bg.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Currículum completo</h2>
-										<p>Si quieres verlo todo junto en formato PDF, aquí tienes mi currículum completo, listo para descargar o consultar.</p>
-										<a href="CURRICULUM-DidacUceroParera.pdf" target="_blank" class="special">Ver currículum en PDF</a>
-									</div>
-								</div>
-							</section>
+  footer{padding-block:32px; border-top:1px solid var(--border); color:var(--muted); font-size:.82rem}
+  .foot-row{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+  .foot-row a{color:var(--accent); text-decoration:none; font-weight:600}
 
-					</section>
+  @media (max-width:640px){
+    .two-col{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .hero-inner{flex-direction:column; align-items:stretch}
+    .tl-item{grid-template-columns:1fr}
+    .tl-mark{display:none}
+  }
+  @media (prefers-reduced-motion: no-preference){
+    .hero-inner{animation:rise .5s ease-out both}
+  }
+  @keyframes rise{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:translateY(0)}}
+</style>
+</head>
+<body>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Contacto</h2>
-							<ul class="contact-inline">
-								<li><span class="emoji">📍</span> 28230</li>
-								<li><span class="emoji">📱</span> <a href="tel:+34650111360">+34 650 11 13 60</a></li>
-								<li><span class="emoji">✉️</span> <a href="mailto:duceroparera@gmail.com">duceroparera@gmail.com</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Dídac Ucero. Todos los derechos reservados.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+<nav class="nav">
+  <div class="nav-inner rail">
+    <a class="nav-name" href="#top">DÍDAC UCERO PARERA</a>
+    <div class="nav-links">
+      <a href="#perfil">Perfil</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#formacion">Formación</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="../portfolio/">Portfolio ↗</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="CURRICULUM-DidacUceroParera.pdf" target="_blank" rel="noopener">Ver PDF</a>
+    </div>
+  </div>
+</nav>
 
-			</div>
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <svg viewBox="0 0 800 260" preserveAspectRatio="xMidYMid slice">
+      <line x1="40" y1="40" x2="180" y2="90"></line>
+      <line x1="180" y1="90" x2="120" y2="180"></line>
+      <line x1="180" y1="90" x2="320" y2="60"></line>
+      <line x1="320" y1="60" x2="420" y2="140"></line>
+      <line x1="420" y1="140" x2="560" y2="90"></line>
+      <line x1="560" y1="90" x2="700" y2="130"></line>
+      <line x1="420" y1="140" x2="520" y2="220"></line>
+      <line x1="120" y1="180" x2="260" y2="230"></line>
+      <line x1="560" y1="90" x2="640" y2="30"></line>
+      <circle cx="40" cy="40" r="4"></circle>
+      <circle cx="180" cy="90" r="5"></circle>
+      <circle cx="120" cy="180" r="4"></circle>
+      <circle cx="320" cy="60" r="4"></circle>
+      <circle cx="420" cy="140" r="5"></circle>
+      <circle cx="560" cy="90" r="4"></circle>
+      <circle cx="700" cy="130" r="4"></circle>
+      <circle cx="520" cy="220" r="4"></circle>
+      <circle cx="260" cy="230" r="4"></circle>
+      <circle cx="640" cy="30" r="4"></circle>
+    </svg>
+  </div>
+  <div class="rail hero-inner">
+    <img class="avatar" src="images/photo.jpg" alt="Foto de Dídac Ucero Parera" width="112" height="112">
+    <div class="hero-text">
+      <span class="eyebrow">Currículum</span>
+      <h1>Dídac Ucero Parera</h1>
+      <p class="hero-role">Técnico en Sistemas Microinformáticos y Redes · cursando ASIR</p>
+      <div class="contact-row">
+        <button class="contact-chip" data-copy="duceroparera@gmail.com" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 6l8 7 8-7"/></svg>
+          duceroparera@gmail.com
+        </button>
+        <button class="contact-chip" data-copy="+34 650 111 360" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+          +34 650 111 360
+        </button>
+        <span class="contact-chip" style="cursor:default">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          28230, Madrid
+        </span>
+      </div>
+      <span class="copy-flag" id="copy-flag">Copiado al portapapeles</span>
+    </div>
+  </div>
+</header>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<main class="rail">
 
-	</body>
+  <section id="perfil">
+    <div class="section-head">
+      <span class="eyebrow">01 · Perfil</span>
+      <h2>Quién soy</h2>
+    </div>
+    <p class="lede" style="max-width:68ch">
+      Técnico en Sistemas Microinformáticos y Redes, actualmente cursando el Ciclo Formativo de
+      Grado Superior en Administración de Sistemas Informáticos en Red (ASIR). Combino la
+      formación con proyectos propios de desarrollo de software y experiencia práctica en soporte
+      informático. Proactivo, con buena capacidad de trabajo en equipo y disponibilidad total.
+    </p>
+  </section>
+
+  <section id="experiencia">
+    <div class="section-head">
+      <span class="eyebrow">02 · Trayectoria</span>
+      <h2>Experiencia laboral</h2>
+    </div>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-mark"></div>
+        <div class="tl-body">
+          <div class="tl-row">
+            <h3>Prácticas en el departamento de IT</h3>
+            <span class="tl-when">4 meses</span>
+          </div>
+          <div class="org">Preventiva Seguros</div>
+          <p>Soporte técnico y mantenimiento de equipos y sistemas informáticos.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"></div>
+        <div class="tl-body">
+          <div class="tl-row">
+            <h3>Socorrista de piscinas y parques acuáticos</h3>
+            <span class="tl-when">6 meses</span>
+          </div>
+          <p>Vigilancia y seguridad de usuarios, atención al público y primeros auxilios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="section-head">
+      <span class="eyebrow">03 · Iniciativa propia</span>
+      <h2>Proyectos personales</h2>
+    </div>
+    <div class="card project">
+      <div>
+        <h3>TVisor</h3>
+        <span class="tagline">Gestión de tareas del hogar</span>
+      </div>
+      <p>
+        Aplicación Android nativa (Kotlin) con backend propio (Node.js) y base de datos, para
+        organizar hogares, miembros y tareas domésticas. Diseño de interfaz propio. Desarrollada
+        y probada de principio a fin en un dispositivo Android real. Repositorio privado en GitHub.
+      </p>
+      <div class="chip-row">
+        <span class="chip">Kotlin</span>
+        <span class="chip">Android</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Base de datos</span>
+        <span class="chip">GitHub privado</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion">
+    <div class="section-head">
+      <span class="eyebrow">04 · Estudios</span>
+      <h2>Formación académica</h2>
+    </div>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-mark"></div>
+        <div class="tl-body">
+          <div class="tl-row">
+            <h3>Administración de Sistemas Informáticos en Red (ASIR)</h3>
+            <span class="tl-when">En curso</span>
+          </div>
+          <p>Ciclo Formativo de Grado Superior.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-mark"></div>
+        <div class="tl-body">
+          <h3>Sistemas Microinformáticos y Redes (SMR)</h3>
+          <p>ISEP CEU San Pablo — Ciclo Formativo de Grado Medio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="herramientas">
+    <div class="section-head">
+      <span class="eyebrow">05 · Caja de herramientas</span>
+      <h2>Herramientas y tecnologías</h2>
+    </div>
+    <div class="tool-groups">
+      <div class="tool-group">
+        <h3>Sistemas y redes</h3>
+        <div class="tool-chips">
+          <span class="tool-chip">Linux (Ubuntu / Debian)</span>
+          <span class="tool-chip">Windows Server / Active Directory</span>
+          <span class="tool-chip">Bash scripting</span>
+          <span class="tool-chip">VirtualBox / Vagrant</span>
+          <span class="tool-chip">Cisco Packet Tracer</span>
+        </div>
+      </div>
+      <div class="tool-group">
+        <h3>Desarrollo</h3>
+        <div class="tool-chips">
+          <span class="tool-chip">Android (Kotlin)</span>
+          <span class="tool-chip">Node.js</span>
+          <span class="tool-chip">Git / GitHub</span>
+          <span class="tool-chip">PSeint</span>
+        </div>
+      </div>
+      <div class="tool-group">
+        <h3>Ofimática y diseño</h3>
+        <div class="tool-chips">
+          <span class="tool-chip">Excel</span>
+          <span class="tool-chip">Word</span>
+          <span class="tool-chip">Illustrator</span>
+          <span class="tool-chip">Photoshop</span>
+          <span class="tool-chip">Canva</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="idiomas-aptitudes">
+    <div class="two-col">
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">06 · Idiomas</span>
+          <h2 style="font-size:1.1rem">Idiomas</h2>
+        </div>
+        <div class="lang-item">
+          <div class="lang-row"><span>Castellano y catalán</span><span class="lang-level">Nativo</span></div>
+          <div class="bar"><div class="bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-row"><span>Inglés</span><span class="lang-level">Nivel medio</span></div>
+          <div class="bar"><div class="bar-fill" style="width:55%"></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">07 · Perfil personal</span>
+          <h2 style="font-size:1.1rem">Aptitudes</h2>
+        </div>
+        <div class="tag-list">
+          <span class="tag">Trabajo en equipo</span>
+          <span class="tag">Trabajador y comprometido</span>
+          <span class="tag">Empático y solidario</span>
+          <span class="tag">Humilde</span>
+          <span class="tag">Disponibilidad total</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="titulos">
+    <div class="section-head">
+      <span class="eyebrow">08 · Otras acreditaciones</span>
+      <h2 style="font-size:1.1rem">Títulos</h2>
+    </div>
+    <div class="tag-list">
+      <span class="tag">Socorrista de piscinas y parques acuáticos</span>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="rail foot-row">
+    <span>Dídac Ucero Parera — 28230, Madrid</span>
+    <a href="CURRICULUM-DidacUceroParera.pdf" target="_blank" rel="noopener">Descargar / ver CV en PDF ↗</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var flag = document.getElementById('copy-flag');
+  var flagTimer = null;
+  document.querySelectorAll('.contact-chip[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy');
+      function showFlag(){
+        if (!flag) return;
+        flag.classList.add('show');
+        clearTimeout(flagTimer);
+        flagTimer = setTimeout(function(){ flag.classList.remove('show'); }, 1600);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showFlag).catch(function(){
+          var r = document.createRange();
+          r.selectNodeContents(btn);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(r);
+        });
+      }
+    });
+  });
+})();
+</script>
+</body>
 </html>
